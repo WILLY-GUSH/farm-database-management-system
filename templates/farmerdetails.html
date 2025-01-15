@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center">Farmer Details</h2>
+<table class="table table-bordered table-hover mt-4">
+    <thead class="table-dark">
+        <tr>
+            <th>Farmer Name</th>
+            <th>Adhar Number</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Farming Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for farmer in query %}
+        <tr>
+            <td>{{ farmer.farmername }}</td>
+            <td>{{ farmer.adharnumber }}</td>
+            <td>{{ farmer.age }}</td>
+            <td>{{ farmer.gender }}</td>
+            <td>{{ farmer.phonenumber }}</td>
+            <td>{{ farmer.address }}</td>
+            <td>{{ farmer.farming }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center">Add Agro Product</h2>
+<form method="POST" action="/addagroproduct" class="mx-auto mt-4" style="max-width: 400px;">
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" name="username" id="username" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" id="email" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label for="productname" class="form-label">Product Name</label>
+        <input type="text" name="productname" id="productname" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label for="productdesc" class="form-label">Description</label>
+        <textarea name="productdesc" id="productdesc" class="form-control" rows="3" required></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" name="price" id="price" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-success w-100">Add Product</button>
+</form>
+{% endblock %}

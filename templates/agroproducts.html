@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center">Agro Products</h2>
+<table class="table table-bordered table-hover mt-4">
+    <thead class="table-dark">
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in query %}
+        <tr>
+            <td>{{ product.username }}</td>
+            <td>{{ product.email }}</td>
+            <td>{{ product.productname }}</td>
+            <td>{{ product.productdesc }}</td>
+            <td>{{ product.price }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/addagroproduct" class="btn btn-primary mt-3">Add New Product</a>
+{% endblock %}
